@@ -1,147 +1,58 @@
-/* body {
-    margin: 0;
-    padding: 0;
-    background-color: purple;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: auto;
-    grid-gap: 5px;
-    grid-template-rows: repeat(5, auto) repeat(3, 20%) 10%;
-    grid-template-areas:
-    "header"
-    "nav1"
-    "nav2"
-    "nav3"
-    "nav4"
-    "section1"
-    "section2"
-    "section3"
-    "footer"
-}
-
-header {
-    grid-area: header;
-    background-color: orange;
-}
-
-nav:nth-of-type(1) {
-    grid-area: nav1;
-    background-color: salmon;
-}
-
-nav:nth-of-type(2) {
-    grid-area: nav2;
-    background-color: red;
-}
-
-nav:nth-of-type(3) {
-    grid-area: nav3;
-    background-color: salmon;
-}
-
-nav:nth-of-type(4) {
-    grid-area: nav4;
-    background-color: red;
-}
-
-section:nth-last-of-type(1) {
-    grid-area: section1;
-    background-color: yellow;
-}
-section:nth-last-of-type(2) {
-    grid-area: section2;
-    background-color: greenyellow;
-}
-section:nth-last-of-type(3) {
-    grid-area: section3;
-    background-color: green;
-}
-
-footer {
-    grid-area:footer;
-    background-color: cyan;
-} */
-
-/* when screen hits min of 768 px it will do the following */
-/* @media screen and (min-width: 768px) {
-    body{
-        grid-template-columns: repeat(4, auto);
-        grid-template-rows: 20% 15% auto auto;
-        grid-template-areas: 
-        
-        "header header header header"
-        "nav1 nav2 nav3 nav4"
-        "section1 section1 section2 section2"
-        "section3 section3 footer footer"
-        
-    }
-
-}
-
-@media screen and (min-width: 1024px) {
-    body{
-        grid-template-columns: 25% repeat(3,auto);
-        grid-template-rows: 25% auto 20%;
-        grid-template-areas: 
-            "header nav1 nav2 nav3 nav4"
-            "section1 section2 section2 section3 section3"
-            "footer footer footer footer footer"
-
-        
-    }
-    
-} */
-
 *{ 
     padding: 0;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Didot, serif;
 }
 
 body {
     line-height: 1.4;
-    color: rgb(48, 48, 48);
+    color: rgba(23, 63, 82);
 
 }
+
 img {
     width:100%;
     display: block;
 }
+
 .container{
     max-width: 1320px;
     margin: 0 auto;
-    padding: 1 1.2rem;
+    padding: 0 1.2rem;
 }
 
 /* header */
 header{
     min-height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(images/banner-bg.png) center/cover no-repeat fixed;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(images/banner-bg.png) center/cover no-repeat fixed;
     display: flex;
     flex-direction:column;
     justify-content: stretch;
 }
 
 .navbar{
-    background: rgba(0,0,0,0.6);
+    background: rgba(0,0,0, 0.4);
     padding: 1.2rem;
 }
-.navbar-brand{
+
+.navbar-title{
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.5rem;
     display: block;
     text-align: center;
     text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Didot, serif;
     letter-spacing: 1px;
 }
+
 .navbar-nav{
     padding:0.8rem 0 0.2rem 0;
     text-align: center;  
 }
+
 .navbar-nav a{
     text-transform: uppercase;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Didot, serif;
     letter-spacing: 1px;
     font-weight: 500;
     color: #fff;
@@ -151,9 +62,11 @@ header{
     letter-spacing: 3px;
     transition: opacity 0.5s ease;
 }
+
 .navbar-nav a:hover{
-    opacity:0.7;
+    opacity:0.8;
 }
+
 .banner{
     flex: 1;
     display: flex;
@@ -162,79 +75,68 @@ header{
     text-align: center;
     color: #fff;
 }
+
 .banner-title{
     font-size: 3rem;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Didot, serif;
     line-height: 1.2;
 }
+
 .banner-title span{
-    font-family: Arial, Helvetica, sans-serif;
-    color: black;
+    font-family: Didot, serif;
+    color: rgba(23, 63, 82);
 }
+
 .banner p{
     padding: 1rem 0 2em 0;
     font-size: 1.2rem;
     text-transform: capitalize;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Didot, serif;
     font-weight: 300;
     word-spacing: 2px;
 
 }
-.banner form{
-    background: #fff;
-    border-radius: 2rem;
-    padding: 0.6rem 1rem;
-    display: flex;
-    justify-content: space-between;
-}
-.search-input {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 1.1rem;
-    width: 100%;
-    outline: 0;
-    padding: 0.6rem 0;
-    border: none;
-}
-.search-input::placeholder{
-    text-transform: capitalize;
-}
-.search-btn{
-    width: 40px;
-    font-size: 1.1rem;
-    color:rgb(48, 48, 48);
-    border: none;
-    background: transparent;
-    outline: 0;
-    cursor: pointer;
-}
+
 /* design */
 .design{
     padding: 4.5rem 0;
 }
+
 .title{
     text-align: center;
     padding: 1rem 0;
 }
+
 .title h2{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Didot, serif;
     font-size: 2.4rem;
 }
+
 .title p{
     text-transform: uppercase;
     padding: 0.6rem 0;
 }
+
 .design-content{
     margin: 2rem 0;
 }
+
 .design-item{
-    cursor: pointer;
+    /*cursor: pointer;*/
     margin: 1.5rem 0;
 }
+
 .design-img{
     position:relative;
     overflow: hidden;
 }
-.design img :: after{
+
+.design-img button{
+    border: none;
+    cursor: pointer;
+}
+
+.design img::after{
     position: absolute;
     content: "";
     top: 0;
@@ -247,18 +149,21 @@ header{
 .design-img img{
     transition: all 0.5s ease;
 }
+
 .design-item:hover img{
     transform: scale(1.2);
 }
+
 .design-img span:first-of-type{
     position:absolute;
     z-index: 1;
     top: 10px;
     left: 10px;
-    background: black;
+    background: rgba(23, 63, 82);
     color: #fff;
     padding: 0.25rem 1rem;
 }
+
 .design-img span:last-of-type{
     position:absolute;
     z-index:1;
@@ -268,7 +173,155 @@ header{
     font-weight: 700;
     font-size: 1.1rem;
 }
+
 .design-title{
     padding: 1rem;
     font-size: 1.2rem;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto; 
 }
+
+.design-title h3{
+    color:rgb(23, 63, 82);
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: 900;
+    font-family:Didot, serif;
+}
+
+
+
+/*popup*/
+.popup .overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    z-index: 1;
+    display:none;
+}
+
+.popup .content {
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%) scale(0);
+    background: #fff;
+    width: 65%;
+    max-height: 90%;
+    /*height: 50%;*/
+    z-index: 2;
+    text-align: center;
+    padding: 30px;
+    box-sizing: border-box;
+    overflow: scroll;
+    
+}
+
+.popup h1{
+    font-family: Didot, serif;
+    font-size: 2rem;
+    text-align: center;
+    
+
+}
+
+.popup p{
+    font-size: .9rem;
+    font-family:Didot, serif;
+    text-align: left;
+    margin:1rem;
+    
+}
+
+.popup .close-btn {
+    cursor:pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    background: rgba(23, 63, 82);
+    color:#fff;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.popup.active .overlay {
+    display: block;
+}
+
+.popup.active .content {
+    transition: all 300ms ease-in-out;
+    transform:translate(-50%, -50%) scale(1);
+}
+
+.popup img{
+    width:15vw;
+    margin: auto auto 1rem auto;
+
+}
+
+/* footer */
+footer{
+    background: rgb(121, 121, 121);
+    color: white;
+    text-align:center;
+    padding: 2rem 0;
+
+}
+
+.footer span{
+    margin-top: 1rem;
+    display: block;
+    font-family: Didot, serif;
+    letter-spacing: 2px;  
+}
+
+/* Media Queries */
+@media screen and (min-width: 540px){
+    .navbar-nav a{
+        padding-right:1.2rem;
+        padding-left:1.2rem;
+    }
+    .banner-title{
+        font-size:5rem;
+    }
+    .banner form{
+        margin-top:1.4rem;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (min-width:768px){
+    .navbar .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .design-content{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    .design-item{
+        margin:0;
+    }
+    
+}
+    
+@media screen and (min-width: 1200px) {
+    .design-content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+    
